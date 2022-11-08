@@ -20,20 +20,6 @@ DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 
 
-
-# My settings
-ALLOWED_HOSTS = ['*']
-APPEND_SLASH = False
-
-# EMAIL_USE_TLS = EMAIL_USE_TLS
-# EMAIL_HOST = EMAIL_HOST
-# EMAIL_HOST_USER = EMAIL_HOST_USER
-# EMAIL_HOST_PASSWORD = 'cktefnsenvfyxxlc'
-# EMAIL_PORT = EMAIL_PORT
-
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -121,8 +107,13 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# My settings
+
+ALLOWED_HOSTS = ['*']
+APPEND_SLASH = False
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals(), staticfiles=False)
 STATIC_ROOT =  os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'
 
@@ -136,8 +127,11 @@ STATICFILES_DIRS = (
 
 CRISPY_TEMPLATE_PACK = 'uni_form'
 CORS_ALLOW_ALL_ORIGINS = True
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-django_heroku.settings(locals(), staticfiles=False)
+
+
+# EMAIL_USE_TLS = EMAIL_USE_TLS
+# EMAIL_HOST = EMAIL_HOST
+# EMAIL_HOST_USER = EMAIL_HOST_USER
+# EMAIL_HOST_PASSWORD = 'cktefnsenvfyxxlc'
+# EMAIL_PORT = EMAIL_PORT
