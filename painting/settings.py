@@ -114,7 +114,7 @@ APPEND_SLASH = False
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals(), staticfiles=False)
-STATIC_ROOT =  os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT =  os.path.join(BASE_DIR, "static_root")
 STATIC_URL = '/static/'
 
 CSRF_TRUSTED_ORIGINS = [
