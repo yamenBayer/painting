@@ -15,3 +15,6 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='Password/password_reset_complete.html'), name='password_reset_complete'),      
 
 ] 
+admin.site.site_header  =  "Sky Colors Administration"  
+admin.site.site_title  =  "Sky Colors"
+admin.site.index_title  =  "Data Control"
