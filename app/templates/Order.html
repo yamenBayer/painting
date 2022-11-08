@@ -1,0 +1,75 @@
+{% extends "Layout/Header.html" %}
+{% load static %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="/">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/services">Services</a>
+</li>
+<li class="nav-item" style="width: 150px;">
+  <a class="nav-link" href="/contact_us">Contact us</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/admin/">Admin</a>
+</li>
+{% endblock %}
+
+{% block Content %}
+
+
+
+<section class="about_section layout_padding bg-light pt-5">
+    <div class="container">
+      {% for message in messages %}
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <button type="button" class="btn btn-close" data-bs-dismiss="alert"></button>
+      <strong>Success!</strong> {{message}}
+      </div>
+      {% endfor %}
+      <center><h1>Send Order</h1></center><hr>
+      <form class="pt-3" class="was-validated" action="/order" method="post">
+      {% csrf_token %}
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control form-control-lg" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" name="phone" placeholder="Phone" required>
+        </div>
+
+          <select class="form-select form-select-lg" name="service" required>
+            <option>Painting</option>
+            <option>Windows & Doors</option>
+            <option>Pressure Washing</option>
+            <option>Home Improvement, Maintenance & Repair</option>
+            <option>Gutter Cleaning, Installation & Repair</option>
+            <option>Light, Plug & Ceiling Fan Installation</option>
+            <option>Cleaning Services</option>
+            <option>Fences</option>
+            <option>Wall Repair & Installation</option>
+            <option>Basic Plumbing Repair & Installation</option>
+            <option>Deck & Patio</option>
+            <option>Finish Carpentry</option>
+            <option>Other</option>
+          </select>
+   
+        <div class="form-group mt-3">
+          <textarea id="description" class="form-control p_input" name="description" rows="10" cols="50" placeholder="Enter description"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" name="address" placeholder="Address" required>
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="/order">Send</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+{% load static %}
+
+{% endblock Content %}

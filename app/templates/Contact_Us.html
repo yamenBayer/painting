@@ -1,0 +1,60 @@
+{% extends "Layout/Header.html" %}
+{% load static %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="/">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/services">Services</a>
+</li>
+<li class="nav-item active" style="width: 150px;">
+  <a class="nav-link" href="/contact_us" >Contact us<span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/admin/">Admin</a>
+  </li>
+{% endblock %}
+
+{% block Content %}
+
+<section class="about_section layout_padding bg-light">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/BG.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are Sky Colors
+              </h2>
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <div style="display: flex;align-items: center;">
+                <a href="/services" class="text-light" style="margin-right: 25px;">
+                    Check our services
+                </a>                        
+                <a href="/order" class="text-light">
+                    Send specific order
+                </a>                    
+            </div>
+                    
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% load static %}
+
+{% endblock Content %}

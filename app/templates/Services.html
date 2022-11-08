@@ -1,0 +1,321 @@
+{% extends "Layout/Header.html" %}
+{% load static %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="/">Home</a>
+</li>
+<li class="nav-item active">
+  <a class="nav-link" href="/services">Services <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item" style="width: 150px;">
+  <a class="nav-link" href="/contact_us">Contact us</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="/admin/">Admin</a>
+  </li>
+{% endblock %}
+
+{% block Content %}
+
+<section class="food_section layout_padding-bottom bg-light">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2 class="mt-5 mb-2" style="color: #000055;">
+          Our Services 
+          <hr>
+        </h2>
+      </div>
+     
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                    <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/01.jpg' %}');background-position: center;background-size: cover;">  
+                    </div>
+                <div class="detail-box">
+                  <h5>
+                    Painting
+                  </h5>
+                  <p>
+                    Interior & Exterior Painting
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/02.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Windows & Doors
+                  </h5>
+                  <p>
+                    Repair & Installation
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/03.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Pressure Washing
+                  </h5>
+                  <p>
+                    In/Out House
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/04.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Home Improvement 
+                  </h5>
+                  <p>
+                    Maintenance & Repair
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all fries">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/05.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Gutter Cleaning, Installation & Repair
+                  </h5>
+                  <p>
+                    <br>
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/06.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Light, Plug & Ceiling Fan Installation
+                  </h5>
+                  <p>
+                    <br>
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/07.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cleaning Services
+                  </h5>
+                  <p>
+                    <ul>
+                        <li>Heavy Cleaning</li>
+                        <li>Household Cleaning</li>
+                        <li>Junk Removal</li>
+                    </ul>
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/08.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Fences
+                  </h5>
+                  <p style="margin-bottom: 105px;">  
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/09.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Wall Repair & Installation
+                  </h5>
+                  <p>
+                    <ul>
+                        <li>Drywall, Plaster </li>
+                        <li>Stucco </li>
+                        <li>Wooden Accent Walls</li>
+                    </ul>
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/10.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Basic Plumbing Repair & Installation
+                  </h5>
+                  <p style="margin-bottom: 97px;">
+                    Sinks, Faucets, Toilets, ETC
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/11.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Deck & Patio
+                  </h5>
+                  <p style="margin-bottom: 97px;">
+                    Repairs, Additions & Installations
+                  </p>
+                  <button type="button" class="btn btn-primary">
+                    <a href="/order" class="text-light">
+                    Send order
+                    </a>                        
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="shadow-lg" style="width: 100%;height: 200px;background: url('{% static 'images/12.jpg' %}');background-position: center;background-size: cover;">  
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Finish Carpentry
+                  </h5>
+                  <p>
+                    <ul>
+                        <li>Crown Molding</li>
+                        <li>Paneling</li>
+                        <li>Baseboards</li>
+                        <li>Shelving </li>
+                    </ul>
+                  </p>
+
+                    <button type="button" class="btn btn-primary">
+                        <a href="/order" class="text-light">
+                        Send order
+                        </a>                        
+                    </button>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="food_section layout_padding-bottom" style="background-color: #dddddd;">
+    <div class="container">
+        <center>
+        <h1 class="pt-5">Didn't Find What You Are Looking For?</h1>
+        <p>Sky Colors Services offers more than displayed. Click the button below to connect with a local manager! </p>
+        <button type="button" class="btn btn-lg btn-primary">
+            <a href="/order" class="text-light">
+            Send specific order
+            </a>                        
+        </button>       
+    </center>
+    </div>
+    </section>
+
+
+{% load static %}
+
+{% endblock Content %}

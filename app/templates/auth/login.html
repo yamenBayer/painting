@@ -1,0 +1,36 @@
+{% extends "Header.html" %}
+
+{% block AuthMain %}
+
+
+  <div class="container p-5 card border border-5 border-top-0 border-bottom-0 bg-light text-black" style="width: 70%;margin-top: 120px;">
+        <h3><i class="fas fa-user-circle me-3"></i> Login</h3>
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Alert: </strong> {{message}}
+          <button class="btn-close" data-bs-dismiss="alert">      
+          <span aria-hidden="true">&times;</span> 
+          </button>
+          </div>
+          {% endfor %}
+        <form action="/login" class="was-validated" method="post">
+            {% csrf_token %}
+          <div class="mb-3 mt-3">
+            <label for="uname" class="form-label">Username or Email:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter Username or Email" name="uname" required>
+          </div>
+          <div class="mb-3">
+            <label for="pwd1" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd1" required>
+          </div>
+          <div class="mb-3">
+            <a href="/password_reset">Forget Password?</a>
+          </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Login</button>
+        </form>
+  </div>
+
+
+
+{% endblock  %}
