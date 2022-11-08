@@ -14,15 +14,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-yoiwh3vq-7#g*m%+e$i5@hp#0jwbz3e!rl=&z7ip)x7olt4%5f'
-
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = ['*']
+
 
 
 # My settings
+ALLOWED_HOSTS = ['*']
 APPEND_SLASH = False
 
 # EMAIL_USE_TLS = EMAIL_USE_TLS
@@ -30,6 +30,12 @@ APPEND_SLASH = False
 # EMAIL_HOST_USER = EMAIL_HOST_USER
 # EMAIL_HOST_PASSWORD = 'cktefnsenvfyxxlc'
 # EMAIL_PORT = EMAIL_PORT
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+CSRF_TRUSTED_ORIGINS = [
+    'https://sky-colors.herokuapp.com'
+]
+
 
 STATIC_ROOT =  os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'
