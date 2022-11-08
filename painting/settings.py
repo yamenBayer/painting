@@ -31,21 +31,7 @@ APPEND_SLASH = False
 # EMAIL_HOST_PASSWORD = 'cktefnsenvfyxxlc'
 # EMAIL_PORT = EMAIL_PORT
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-CSRF_TRUSTED_ORIGINS = [
-    'https://sky-colors.herokuapp.com'
-]
 
-
-STATIC_ROOT =  os.path.join(BASE_DIR, "staticfiles")
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
-
-CRISPY_TEMPLATE_PACK = 'uni_form'
-CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
@@ -137,9 +123,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+STATIC_ROOT =  os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://sky-colors.herokuapp.com'
+]
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
+CORS_ALLOW_ALL_ORIGINS = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
