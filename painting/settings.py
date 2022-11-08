@@ -45,7 +45,6 @@ STATICFILES_DIRS = (
 )
 
 CRISPY_TEMPLATE_PACK = 'uni_form'
-django_heroku.settings(locals())
 CORS_ALLOW_ALL_ORIGINS = True
 
 
@@ -145,3 +144,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals(), staticfiles=False)
