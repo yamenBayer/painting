@@ -34,9 +34,15 @@
       a{
         text-decoration: none;
       }
+      #previewBTN:hover{
+        transition: .2s ease-in-out;
+        opacity: 0.5;
+      }
     </style>
 </head>
 <body>
+
+
 
           <!-- header section strats -->
           <header class="header_section" style="background: #eeeeee;">
@@ -85,12 +91,18 @@
                   Location
                 </span>
               </a>
-              <a href="">
+              <div>
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +1 (407) 346-6626 Spanish + Arabic
                 </span>
-              </a>
+              </div>
+              <div>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +1 (508) 361-3993 English + Arabic
+                </span>
+              </div>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
@@ -102,7 +114,7 @@
         </div>
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
-            <a href="" class="footer-logo">
+            <a href="/" class="footer-logo">
               Sky Colors
             </a>
             <p>
@@ -141,6 +153,7 @@
       </div>
     </div>
   </footer>
+
 
     <!-- jQery -->
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
